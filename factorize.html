@@ -42,6 +42,7 @@
           list.push(ac)
         }
       document.getElementById("res").innerHTML = list.toString().replaceAll(", ", " &middot; ")
+      document.getElementById("res").innerHTML =  document.getElementById("res").innerHTML.replaceAll(",", " · ")
     }
   
   </script>
