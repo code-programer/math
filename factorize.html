@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>MathTricks - Factorize</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+  </head>
+  <body>
+    <h1>Factorize a number</h1>
+    <input type="text" placeholder="Escriu aquí el nombre" id="num"><button onclick="convert()">Convert</button>
+    <p>Result: <b id="res">Write something and convert</b></p>
+  </body>
+  <script>
+    function number_test(n){
+   var result = (n - Math.floor(n)) !== 0; 
+    return result;
+    }
+    function convers(){
+      var ini = document.getElementById("num").value;
+      var prim = [2, 3, 5, 7, 11, 13, 17, 19, 31]
+      var list = []
+      var acn = 0;
+      var ac = prim[0]
+      while(!prim.includes(ini)){
+        if(!number_test(ini/ac)){
+          var ini = ini/ac;
+          list.push(ac)
+        }
+        else{
+          var acn = acn + 1;
+          var ac = prim[acn]
+        }
+      }
+      alert(ini)
+    }
+  </script>
+</html>
