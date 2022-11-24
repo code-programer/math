@@ -29,6 +29,14 @@
           var ac = prim[acn]
         }
       }
+      if(!number_test(ini/ac)){
+          var ini = ini/ac;
+          list.push(ac)
+        }
+        else{
+          var acn = acn + 1;
+          var ac = prim[acn]
+        }
       alert(list.toString().replaceAll(", "," · "))
     }
   
