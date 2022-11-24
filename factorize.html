@@ -17,7 +17,7 @@
         var ini = document.getElementById("num").value;
       var prim = [2, 3, 5, 7, 11, 13, 17, 19, 31]
       var list = []
-      var acn = 0;
+      var at = 0;
       var ac = prim[0]
       while(!prim.includes(ini)){
         if(!number_test(ini/ac)){
@@ -25,8 +25,10 @@
           list.push(ac)
         }
         else{
-          var acn = acn + 1;
-          var ac = prim[acn]
+          var at = at + 1;
+          var ac = prim[at]
+          var ini = ini/ac;
+          list.push(ac)
         }
       }
       if(!number_test(ini/ac)){
@@ -34,8 +36,10 @@
           list.push(ac)
         }
         else{
-          var acn = acn + 1;
-          var ac = prim[acn]
+          var at = at + 1;
+          var ac = prim[at]
+          var ini = ini/ac;
+          list.push(ac)
         }
       alert(list.toString().replaceAll(", "," · "))
     }
